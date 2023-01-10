@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+    <style>
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+
+    </style>
+
+    <div class="main-container">
+
+        <h1>{{ post.headline }}</h1>
+
+        <h4>{{ post.sub_headline }}</h4>
+        <div class="imgbox">
+            <img class="center-fit" src="/static{{ post.thumbnail.url }}">
+        </div>
+
+        <p>{{ post.body|safe }}</p>
+    </div>
+{% endblock %}
