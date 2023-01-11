@@ -12,6 +12,16 @@ class Tag(models.Model):
         return self.name
 
 
+class Category(models.Model):
+    choices = (
+        ('blog')
+    )
+
+    name = models.CharField(max_length=200)
+
+
+
+
 # def upload_path_handler(instance, filename):
 #     return os.path.join(
 #         f'user_{instance.headline}', filename
