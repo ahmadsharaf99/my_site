@@ -152,3 +152,6 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
+
+CSRF_TRUSTED_ORIGINS = ['https://*.web-production-d48d.up.railway.app//', 'https://*.127.0.0.1']
+
